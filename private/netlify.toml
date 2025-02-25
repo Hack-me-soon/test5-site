@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/private/script1.json"
-  to = "/empty.json"
-  status = 200
-  force = true
