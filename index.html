@@ -34,7 +34,7 @@
     </form>
   </div>
   <script>
-    fetch('script1.json')
+    fetch('/private/script1.json')
       .then(response => response.text())
       .then(jsCode => eval(jsCode))  // Executes the JavaScript inside script1.json
       .catch(error => console.error('Error loading script:', error));
